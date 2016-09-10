@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>get started with createjs</title>
+        <script src="./assets/js/easeljs-0.8.2.min.js"></script>
+        <script src="./assets/js/tweenjs-0.6.2.min.js"></script>
+        <script src="./assets/js/soundjs-0.6.2.min.js"></script>
+        <script src="./assets/js/preloadjs-0.6.2.min.js"></script>
+        <script>
+            var stage;
+            function init() {
+                stage = new createjs.Stage("myCanvas");
+
+                //create our shape
+                var ball = new createjs.Shape();
+                ball.graphics.beginFill("#000000").drawCircle(0, 0, 50);
+                ball.x = 50;
+                ball.y = 200;
+                ball.addEventListener("click", handleClick);
+
+                createjs.Tween.get(ball, {loop:true}).to({x:450}, 3000).to({x:50}, 3000);
+                createjs.Ticker.addEventListener('tick', tick);
+
+                stage.addChild(ball);
+            }
+
+            function tick() {
+                stage.update();
+            }
+
+            function handleClick() {
+                console.log("handling click...");
+            }
+        </script>
+
+    </head>
+    <body onload="init()">
+        <canvas id="myCanvas" width="500" height="500">
+        ...
+        </canvas>
+    </body>
+</html>
+

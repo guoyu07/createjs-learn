@@ -1,0 +1,27 @@
+{
+  "name": "createjs-learn",
+  "version": "1.0.0",
+  "description": "my way of learning createjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanJobs/createjs-learn.git"
+  },
+  "keywords": [
+    "createjs",
+    "learn"
+  ],
+  "author": "IvanJobs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanJobs/createjs-learn/issues"
+  },
+  "homepage": "https://github.com/IvanJobs/createjs-learn#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
