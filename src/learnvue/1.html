@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>vuejs learn</title>
+        <script data-main="main" src="require.js"></script>
+    </head>
+    <body>
+        <div id='example-1'>
+            Hello {{name}}!
+        </div>
+
+        <script>
+            require(['main'], function(){
+                    require(['vue'], function(Vue) {
+                        var exampleData = {
+                            name: 'Vue.js'
+                        };
+
+                        var exampleVM = new Vue({
+                            el: '#example-1',
+                            data: exampleData
+                        });
+                    })
+            });
+        </script>
+    </body>
+</html>
